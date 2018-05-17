@@ -1,0 +1,64 @@
+/* general container */
+#lastGif, .instructions, #userOutput {
+    background-color: black;
+    opacity: 0.50;
+    border: 1px solid red;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.instructions {
+    padding-bottom: 150px;
+}
+
+#lastGif {
+    padding-bottom: 250px;
+}
+
+#userOutput, {
+    padding-bottom: 250px;
+}
+
+#keyboard {
+    padding-bottom: 150px;
+    opacity: 1;
+    padding: 10px;
+}
+
+/* whole document */
+body {
+    font-family: 'Economica', sans-serif;
+    font-size: 30px;
+    line-height: 1.5rem;
+    background-image: url("../images/background.jpg");
+    color: white;
+
+}
+
+/* jumbotron */
+.jumbotron .container, .jumbotron-fluid {
+    background-color: black;
+    color: white;
+    opacity: 0.75;
+
+}
+
+/* keyboard */
+#keyboard {
+    opacity: 0.85;
+}
+
+/* <button id="c">C</button><button id="cSharp">D♭/C#</button><button id="d">D</button><button id="eFlat">E♭/D#</button><button id="e">E</button>
+<button id="f">F</button><button id="fSharp">G♭/F#</button><button id="g">G</button><button id="aFlat">A♭/G#</button><button id="a">A</button>
+<button id="bFlat">B♭/A#</button><button id="b">B</button><button id="cOctave">C</button></div> */
+
+/* #c, #d, #e, #f, #g, #a, #b, #cOctave {
+    background-color: white;
+    color: white;
+}
+
+#cSharp, #eFlat, #fSharp, #aFlat, #bFlat {
+    background-color: black;
+    color: black;
+} */
