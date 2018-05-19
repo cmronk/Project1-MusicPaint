@@ -12,6 +12,7 @@
     </head>
 
     <body>
+
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h1 class="display-4">Dance Dance Javascript-tion</h1>
@@ -25,9 +26,14 @@
                     <p class="instructions">Our instructions will go in this space.  Maybe we will have some dancing gifs, maybe we'll have a piano with some music, but who knows?  We got a lot of work to do with our APIs and a TON of javascript, but we'll get there, and it should be awesome. </p>
                 </div>
                 <div class="col-md-4">
-                    <div id="lastGif">This is where our "last gif" will output</div>
+                        <div id="player">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLaq-_cPy3RZxKTFYyCwuD1zEGhxvIYHbR" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+
+                        </div>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-md-6">
                     <div id="userOutput">We aren't sure what will go here, but it will be user generated... i.e. either the animations/shapes or scores or gifs or who knows...</div>
@@ -41,19 +47,23 @@
                     </div>
                 </div>
             </div>
+            <h1 >Find music here!</h1>
+
+            <div class="row">
+                    <div class="col-md-12">
+                        <form action="#">
+                            <input type="text" id="search" placeholder="song title here" autocomplete="off"/>
+                            <button type="submit" value="Search" class="form-control btn"></p>
+                        </form>
+                        <div id="results"></div>
+                    </div>
+                </div>
         </div>
 
-
-        <script>
-            
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>    
         <!-- tone.js  -->
-        
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
         <script type="text/javascript" src="assets/javascript/app.js"></script>
-        <!-- two.js -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.6.0/two.js"></script>
-
-    </body>
+]    </body>
 </html>
