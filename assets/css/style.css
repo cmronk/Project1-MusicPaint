@@ -1,83 +1,122 @@
-/* general container */
-#lastGif, .instructions, #userOutput {
-    background-color: black;
-    opacity: 0.50;
-    border: 1px solid red;
-    padding: 20px;
-    margin: 20px;
-
-}
-
-.instructions {
-    padding-bottom: 150px;
-}
-
-#lastGif {
-    padding-bottom: 250px;
-}
-
-#userOutput, {
-    padding-bottom: 250px;
-}
-
-#keyboard {
-    padding-bottom: 150px;
-    opacity: 1;
-    padding: 10px;
-}
+/* general containers */
 
 /* whole document */
 body {
-    font-family: 'Economica', sans-serif;
-    font-size: 30px;
-    line-height: 1.5rem;
-    background-image: url("../images/background.jpg");
-    color: white;
-
+  /* font-family: 'Fredericka the Great';   */
+  font-family: 'Didact Gothic', sans-serif;
+  color: black;
+  background-image: url("../images/background.jpeg");
 }
 
 /* jumbotron */
 .jumbotron .container, .jumbotron-fluid {
-    background-color: black;
     color: white;
     opacity: 0.75;
-
-}
-
-/* keyboard */
-#keyboard {
-    opacity: 0.85;
-}
-
-/* <button id="c">C</button><button id="cSharp">D♭/C#</button><button id="d">D</button><button id="eFlat">E♭/D#</button><button id="e">E</button>
-<button id="f">F</button><button id="fSharp">G♭/F#</button><button id="g">G</button><button id="aFlat">A♭/G#</button><button id="a">A</button>
-<button id="bFlat">B♭/A#</button><button id="b">B</button><button id="cOctave">C</button></div> */
-
-/* #c, #d, #e, #f, #g, #a, #b, #cOctave {
-    background-color: white;
-    color: white;
-}
-
-#cSharp, #eFlat, #fSharp, #aFlat, #bFlat {
-    background-color: black;
-    color: black;
-} */
-
+    background: black;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 1.5rem;
     
+}
 
+/* navbar */
+navbar {
+  margin: 0;
+}
+
+nav {
+  opacity: 0.5;
+  border: 1px solid red;
+  margin-bottom: 1rem;
+
+}
+
+/* footer */
+#fixed-bottom, footer .card {
+  color: white;
+  opacity: 0.5;
+  background: black;
+  text-align: right;
+  border-radius: 0;
+  border: 1px solid red;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  padding: 20px;
+  background: black;
+  color: white;
+  border: 1px solid red;
+}
+
+/* form */
+form, #last-user-display, #user-display, #instructions, #key-reminders, #about, #contact, #resources {
+  color: black;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid red;
+  opacity: 0.75;
+  
+
+}
+
+#user-display {
+  text-align: center;
+  border: 1px solid red;
+  opacity: 0.75;
+}
+
+#user-display h3 {
+  border-bottom: 2px solid black;
+}
+
+#last-user-display {
+  border: 1px solid red;
+  opacity: 0.75;
+}
+
+#name-display, #song-display {
+  background: white;
+  opacity: 0.75;
+  color: black;
+}
+
+#resources {
+  text-align: center;
+}
 /* Piano Key section */
 
+/* * { box-sizing:border-box; } */
 
-* { box-sizing:border-box; }
+  body ul{ 
+      margin:0; 
+      background:#222; 
+    }
 
-  /* body{ margin:0; background:#222; } */
   ul {
     height:18.875em; width:34em;
     margin:5em auto; padding:3em 0 0 3em; position:relative; 
     border:1px solid #160801; border-radius:1em; 
     /* background:-webkit-gradient(linear, right bottom, left top, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0))), url('https://f.cl.ly/items/2q1f3t0C3R1b0g081w3n/vwood.png'); */
-  box-shadow:0 0 50px rgba(0,0,0,0.5) inset, 0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5); }
-  li { margin:0; padding:0; list-style:none; position:relative; float:left; }
+    box-shadow:0 0 50px rgba(0,0,0,0.5) inset, 0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5); 
+    }
+
+  li { 
+      margin:0; 
+      padding:0; 
+      list-style:none; 
+      position:relative; 
+      float:left; 
+    }
 
   ul .white {
     height:16em; width:4em; z-index:1;

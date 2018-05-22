@@ -2,96 +2,196 @@
 <html>
 
 <head>
-    <title>Dance Dance Javascript-tion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn to play with YouTube</title>
     <!-- font link -->
-    <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">   
     <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 </head>
-
+<!-- test test one two one two -->
 <body>
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Dance Dance Javascript-tion</h1>
-            <p class="lead">I don't remember what David's title is, but it'll go here </p>
+            <h1 class="animated rubberBand">Learn to play piano!  </h1>                
+            <h3>(or just mash keys... no judgement here)</h3>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <p class="instructions">Our instructions will go in this space. Maybe we will have some dancing gifs, maybe we'll have a piano with
-                    some music, but who knows? We got a lot of work to do with our APIs and a TON of javascript, but we'll
-                    get there, and it should be awesome. </p>
-            </div>
-            <div class="col-md-4">
-                <div id="player"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div id="userOutput">We aren't sure what will go here, but it will be user generated... i.e. either the animations/shapes or scores
-                    or gifs or who knows...</div>
-            </div>
-            <div class="col-md-6">
-                <div id="keyboard">
-                    <!-- placeholder -->
-                    <br><br>
-                    <ul class="set">
-                      <li class="white e" id="c"></li>
-                      <li class="black ds" id="cSharp"></li>
-                      <li class="white d" id="d"></li>
-                      <li class="black cs" id="dSharp"></li>
-                      <li class="white c" id="e"></li>
-                      <li class="white b" id="f"></li>
-                      <li class="black as" id="fSharp"></li>
-                      <li class="white a" id="g"></li>
-                      <li class="black gs" id="gSharp"></li>
-                      <li class="white g" id="a"></li>
-                      <li class="black fs" id="aSharp"></li>
-                      <li class="white f" id="b"></li>
-                   
-                      
-                      
-                      
-                      
-                    </ul>
-                
-                
-
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="assets/html/about.html">About</a>
+            <a class="nav-item nav-link" href="assets/html/resources.html">Resources</a>
+            <a class="nav-item nav-link" href="assets/html/connect.html">Connect</a>
             </div>
         </div>
-    </div>
-    </div>
-
+    </nav>
+    
+    <div id="wrapper">
+        <div class="container">
             <div class="row">
-                    <div class="col-md-12">
-                        <form action="#">
-                            <input type="text" id="search" placeholder="song title here" autocomplete="off"/>
-                            <button type="submit" value="Search" class="form-control btn"></p>
-                        </form>
-                        <div id="results"></div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <form>
+                        <h2>First, tell us about you!</h2>
+                        <div class="form-group">
+                            <label for="user-name-input">What is your name?</label>
+                            <input type="text" class="form-control" id="user-name-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="level-input">Current Skill Level</label>
+                            <select class="form-control" id="level-input">
+                                <option>beginner</option>
+                                <option>intermediate</option>
+                                <option>advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="song-input">What songs would you like to see?</label>
+                            <input type="text" class="form-control" id="song-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="musician-input">Who is your favorite musician?</label>
+                            <input type="text" class="form-control" id="musician-input">
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div id="last-user-display">
+                        <h2>Last Visitor: <span id="last-visitor">Jane</span></h2>
+                    </div>    
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="subwrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p id="key-reminders">Lorem ipsum dolor amet af lumbersexual prism flannel. Farm-to-table post-ironic pitchfork, truffaut taxidermy hashtag tofu pinterest bespoke swag ugh salvia direct trade cardigan. Quinoa occupy cold-pressed drinking vinegar 8-bit jean shorts succulents 3 wolf moon, neutra biodiesel palo santo bitters vaporware. +1 prism before they sold out microdosing umami cornhole pitchfork iceland slow-carb. Small batch heirloom pop-up enamel pin live-edge snackwave. Poke iPhone VHS edison bulb.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div id="keyboard">
+                        <ul class="set">
+                            <li class="white e" id="c"></li>
+                            <li class="black ds" id="cSharp"></li>
+                            <li class="white d" id="d"></li>
+                            <li class="black cs" id="dSharp"></li>
+                            <li class="white c" id="e"></li>
+                            <li class="white b" id="f"></li>
+                            <li class="black as" id="fSharp"></li>
+                            <li class="white a" id="g"></li>
+                            <li class="black gs" id="gSharp"></li>
+                            <li class="white g" id="a"></li>
+                            <li class="black fs" id="aSharp"></li>
+                            <li class="white f" id="b"></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+            <br>
+            <div class="row">  
+                <div class="col-lg-6">
+                    <div id="player"></div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
+                    <p id="key-reminders">Lorem ipsum dolor amet williamsburg quinoa unicorn ut. Taxidermy blue bottle sunt, bitters do hot chicken cillum. Ennui live-edge fanny pack keytar. Migas lyft pinterest aute aliqua dreamcatcher ut tempor eu cillum lumbersexual id offal waistcoat. Labore authentic messenger bag ethical. Bushwick cornhole mollit, ipsum swag +1 pitchfork four dollar toast pabst excepteur fugiat heirloom iPhone. Raclette gentrify forage, authentic cred fanny pack mumblecore man bun everyday carry truffaut in narwhal retro.</p>
+                </div>
+            </div>
         </div>
 
-  
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+        <div class="container">
+            <div id="user-display">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3>Names</h3>
+                        <div id="name-display">
+                            Tenille <br>
+                            David <br>
+                            Lex <br>
+                            Christine <br>
+                        </div>
+                    </div>    
+                    <div class="col-lg-2">
+                        <h3>Level</h3>
+                        <div id="level-display">
+                            beginner <br>
+                            advanced <br>
+                            beginner <br>
+                            intermediate <br>
+                        </div>
+                    </div>    
+                    <div class="col-lg-3">
+                        <h3>Song Suggestions</h3>
+                        <div id="song-display">
+                            rock <br>
+                            funk <br>
+                            pop <br>
+                            classical <br>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Favorite Musicians</h3>
+                        <div id="fav-display">
+                            The Beatles <br>
+                            Queen <br>
+                            ACDC <br>
+                            Radiohead <br>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+        <div class="sticky-bottom">
+                <footer>
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                            <p>some quote or something</p>
+                            <footer class="blockquote-footer">guy who said this</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </footer>
+            </div>   
+        </div>
+   
+
+    
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- tone.js  -->
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
+    <!-- app javascript -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <!-- two.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.6.0/two.js"></script>
     <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-   
-    </body >
-</html >
+
+</body>
+
+</html>
