@@ -1,16 +1,16 @@
 $(document).ready(function() {
-
+// CR youtube API
 $.ajax({
-    url: "https://www.googleapis.com/youtube/v3/playlists?part=player&id=PLaq-_cPy3RZxKTFYyCwuD1zEGhxvIYHbR&key=AIzaSyAmH5A7wXlMygxeB0YdiFoHysWyoxtnMDo"
+    url: "https://www.googleapis.com/youtube/v3/playlists?part=player&id=PLaq-_cPy3RZz-qNEAf7U1PMtJwJmxjrBT&key=AIzaSyAmH5A7wXlMygxeB0YdiFoHysWyoxtnMDo"
 }).then(function (data) {
     console.log(data);
 
     $("#player").append(data.items[0].player.embedHtml)
 });
 
-console.log("two");
-SC.initialize({
-    client_id: 'YOUR_CLIENT_ID'
+// CR show/hide feature
+$(document).ready(function() {
+
     // only shows form initially until user specifies level
 $("#subwrapper").hide();
 
@@ -39,28 +39,9 @@ $("#song-display").append(song);
 $("#fav-display").append(fav);
 
   });
-// youtube api
-$.ajax({
-    url: "https://www.googleapis.com/youtube/v3/playlists?part=player&id=PLaq-_cPy3RZxKTFYyCwuD1zEGhxvIYHbR&key=AIzaSyAmH5A7wXlMygxeB0YdiFoHysWyoxtnMDo"
-}).then(function(data){
-    console.log(data);
-    
-    $("#player").append(data.items[0].player.embedHtml)
-});
-
-// stream track id 293
-SC.stream('/tracks/293').then(function (player) {
-    player.play().then(function () {
-        console.log('Playback started!');
-    }).catch(function (e) {
-        console.error('Playback rejected. Try calling play() from a user interaction.', e);
-    });
-});
-
-
-
 
 // TZ Initialize Firebase
+// Initialize Firebase
 var config = {
     apiKey: "AIzaSyDtY8RN8kHeOSCoIz3K6ZR5TFgarg2r-zA",
     authDomain: "music-project-1.firebaseapp.com",
@@ -113,3 +94,29 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
 
 
 })
+
+//Piano Click
+$("body").on("click", "#c", function(){
+  synth.triggerAttackRelease('C4', '8n')
+})
+$("body").on("click", "#d", function(){
+  synth.triggerAttackRelease('D4', '8n')
+})
+$("body").on("click", "#e", function(){
+  synth.triggerAttackRelease('E4', '8n')
+})
+$("body").on("click", "#f", function(){
+  synth.triggerAttackRelease('F4', '8n')
+})
+$("body").on("click", "#g", function(){
+  synth.triggerAttackRelease('G4', '8n')
+})
+$("body").on("click", "#a", function(){
+  synth.triggerAttackRelease('A4', '8n')
+})
+$("body").on("click", "#b", function(){
+  synth.triggerAttackRelease('B4', '8n')
+})
+
+
+});

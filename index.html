@@ -13,13 +13,13 @@
     <!-- animate.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 </head>
-<!-- test test one two one two -->
-<body>
 
+<body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="animated rubberBand">Learn to play piano!  </h1>                
-            <h3>(or just mash keys... no judgement here)</h3>
+            <h1 class="animated rubberBand">VIKI (Virtual Internet Keyboard Instructor)</h1> 
+            <p>She's no SIRI, but hey, there's potential.</p>               
+            <!-- <h3>(or just mash keys... no judgement here)</h3> -->
         </div>
     </div>
 
@@ -75,7 +75,7 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <div id="last-user-display">
-                        <h2>Last Visitor: <span id="last-visitor">Jane</span></h2>
+                        <h2>Last performer: <span id="last-visitor"></span></h2>
                     </div>    
                 </div>
                 <div class="col-lg-2"></div>
@@ -86,9 +86,19 @@
 
     <div id="subwrapper">
         <div class="container">
+            <div class="row">  
+                <div class="col-lg-6">
+                    <div id="player"></div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
+                    <p id="key-reminders">Using your own keyboard with the legend below or clicking on our digital piano, try to follow along :D</p>
+                </div>
+            </div>
+        <br>
             <div class="row">
                 <div class="col-lg-6">
-                    <p id="key-reminders">Lorem ipsum dolor amet af lumbersexual prism flannel. Farm-to-table post-ironic pitchfork, truffaut taxidermy hashtag tofu pinterest bespoke swag ugh salvia direct trade cardigan. Quinoa occupy cold-pressed drinking vinegar 8-bit jean shorts succulents 3 wolf moon, neutra biodiesel palo santo bitters vaporware. +1 prism before they sold out microdosing umami cornhole pitchfork iceland slow-carb. Small batch heirloom pop-up enamel pin live-edge snackwave. Poke iPhone VHS edison bulb.</p>
+                    <div id="keys"><img src="assets/images/keyboard-layout.jpg" max height=302px max width=544px></div>
                 </div>
                 <div class="col-lg-6">
                     <div id="keyboard">
@@ -105,63 +115,11 @@
                             <li class="white g" id="a"></li>
                             <li class="black fs" id="aSharp"></li>
                             <li class="white f" id="b"></li>
+                            <li>n</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row">  
-                <div class="col-lg-6">
-                    <div id="player"></div>
-                </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-5">
-                    <p id="key-reminders">Lorem ipsum dolor amet williamsburg quinoa unicorn ut. Taxidermy blue bottle sunt, bitters do hot chicken cillum. Ennui live-edge fanny pack keytar. Migas lyft pinterest aute aliqua dreamcatcher ut tempor eu cillum lumbersexual id offal waistcoat. Labore authentic messenger bag ethical. Bushwick cornhole mollit, ipsum swag +1 pitchfork four dollar toast pabst excepteur fugiat heirloom iPhone. Raclette gentrify forage, authentic cred fanny pack mumblecore man bun everyday carry truffaut in narwhal retro.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div id="user-display">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h3>Names</h3>
-                        <div id="name-display">
-                            Tenille <br>
-                            David <br>
-                            Lex <br>
-                            Christine <br>
-                        </div>
-                    </div>    
-                    <div class="col-lg-2">
-                        <h3>Level</h3>
-                        <div id="level-display">
-                            beginner <br>
-                            advanced <br>
-                            beginner <br>
-                            intermediate <br>
-                        </div>
-                    </div>    
-                    <div class="col-lg-3">
-                        <h3>Song Suggestions</h3>
-                        <div id="song-display">
-                            rock <br>
-                            funk <br>
-                            pop <br>
-                            classical <br>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <h3>Favorite Musicians</h3>
-                        <div id="fav-display">
-                            The Beatles <br>
-                            Queen <br>
-                            ACDC <br>
-                            Radiohead <br>
-                        </div>
-                    </div>
-                </div>
-            </div>    
         </div>
     </div>
 
@@ -170,8 +128,8 @@
                     <div class="card">
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                            <p>some quote or something</p>
-                            <footer class="blockquote-footer">guy who said this</cite></footer>
+                            <p>“I’ve been imitated so well I’ve heard people copy my mistakes.”</p>
+                            <footer class="blockquote-footer">Jimi Hendrix</cite></footer>
                             </blockquote>
                         </div>
                     </div>
@@ -183,6 +141,8 @@
     
     <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- tone.js  -->
