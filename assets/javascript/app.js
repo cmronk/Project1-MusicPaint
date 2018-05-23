@@ -111,7 +111,6 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
     var userSong = childSnapshot.val().song;
     var userMuscian = childSnapshot.val().musician;
 });
-=======
+
 
 })
->>>>>>> master
