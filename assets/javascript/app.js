@@ -71,7 +71,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-<<<<<<< HEAD
 var database = firebase.database();
 
 // TZ Button for adding User
