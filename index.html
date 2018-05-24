@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">    -->
     <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- animate.css -->
@@ -16,30 +17,33 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron-fluid">
         <div class="container">
-            <h1 class="animated rubberBand">VIKI (Virtual Internet Keyboard Instructor)</h1> 
-            <p>She's no SIRI, but hey, there's potential.</p>               
+            <h1 class="animated rubberBand">VIKI (Virtual Internet Keyboard Instructor)</h1>
+            <p>She's no SIRI, but hey, there's potential.</p>
             <!-- <h3>(or just mash keys... no judgement here)</h3> -->
         </div>
     </div>
 
-    <!-- TODO -->
-    <!-- fix the toggler when viewport is smaller -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="assets/html/about.html">About</a>
-            <a class="nav-item nav-link" href="assets/html/resources.html">Resources</a>
-            <a class="nav-item nav-link" href="assets/html/connect.html">Connect</a>
+                <a class="nav-item nav-link active" href="index.html">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link" href="assets/html/about.html">About</a>
+                <a class="nav-item nav-link" href="assets/html/resources.html">Resources</a>
+                <a class="nav-item nav-link" href="assets/html/connect.html">Connect</a>
             </div>
         </div>
     </nav>
-    
+
+
     <div id="wrapper">
         <div class="container">
             <div class="row">
@@ -56,7 +60,7 @@
                             <select class="form-control" id="level-input">
                                 <option>beginner</option>
                                 <option>intermediate</option>
-                                <option>advanced</option>
+                                <option>advanced (why are you here??!)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -78,39 +82,46 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <div id="last-user-display">
-                        <h2 class="animated rubberBand">Last performer: <span id="last-visitor"></span></h2>
-                    </div>    
+                        <h2 class="animated rubberBand">Last performer:
+                            <span id="last-visitor"></span>
+                        </h2>
+                    </div>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
-        </div>
+        </div>    
     </div>
 
 
     <div id="subwrapper">
         <div class="container">
-            <div class="row">  
+            <div class="row">
                 <div class="col-lg-6">
                     <div id="player"></div>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5">
                     <div id="key-reminders">
-                        <strong><h3>Click play to begin!</h3> 
-                        <p>You have two options to make sounds with VIKI!</p> 
-                        <p>1) Use the computer keyboard with the key provided below. </p>
-                        <p>OR</p> 
-                        <p>2) Click directly on the keyboard. </p>
-                        <p>Follow along and enjoy!</p> 
-                        <p>Or mash those keys and make a beautiful new song :D </p>
-                        <br></strong>
+                        <!-- used breaks instead of list, because the styling on the keyboard uses lists -->
+                        <strong>
+                            <h2>Click play to begin!</h2>
+                            <p>You have two options to make sounds with VIKI!</p>
+                            <p>1) Use the computer keyboard with the key provided below. </p>
+                            <p>OR</p>
+                            <p>2) Click directly on the piano keys. </p>
+                            <p>Follow along and enjoy!</p>
+                            <p>Or mash those keys and make a beautiful new song.</p>
+                            <br>
+                        </strong>
+                    </div>
                 </div>
-            </div>
-        <br>
+                <br>
+
             <div class="row">
                 <div class="col-lg-6">
-                    <div id="keys"><img src="assets/images/keyboard-layout.jpg" max height=302px max width=544px></div>
+                    <div id="keys"><img src="assets/images/keyboard-layout.jpg" max height=250px max width=475px></div>
                 </div>
+            </div>
                 <div class="col-lg-6">
                     <div id="keyboard">
                         <ul class="set">
@@ -126,42 +137,45 @@
                             <li class="white g" id="a"></li>
                             <li class="black fs" id="aSharp"></li>
                             <li class="white f" id="b"></li>
-                            <li>n</li>
+                            <li class="white e" id="c1"></li>
+
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-        <div class="sticky-bottom">
-                <footer>
-                    <div class="card">
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                            <p>“I’ve been imitated so well I’ve heard people copy my mistakes.”</p>
-                            <footer class="blockquote-footer">Jimi Hendrix</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </footer>
-            </div>   
-        </div>
-   
-
     
-    <!-- bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <!-- jQuery  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- tone.js  -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
-    <!-- app javascript -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
+    <!-- TODO -->
+    <!-- fix this stupid footer... it behaves weirdly on all the pages. -->
+        <div class="sticky-bottom">
+            <footer>
+                <div class="card">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>“I’ve been imitated so well I’ve heard people copy my mistakes.”</p>
+                            <footer class="blockquote-footer">Jimi Hendrix</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    
+
+        <!-- jQuery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <!-- tone.js  -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
+        <!-- app javascript -->
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+        <!--Firebase-->
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
 
 </body>
 

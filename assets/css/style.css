@@ -43,7 +43,7 @@ nav {
 }
 
 /* footer */
-#sticky-bottom, footer .card {
+.sticky-bottom, footer .card {
   color: white;
   opacity: 0.5;
   background: black;
@@ -78,6 +78,7 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
   border-radius: 1rem;
   border: 1px solid red;
   opacity: 0.75;
+  overflow: none;
   
 
 }
@@ -110,9 +111,10 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
 
 #keys {
   opacity: 0.85;
+  margin: 1rem;
 }
 /* .set {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 } */
 /* * { box-sizing:border-box; } */
 
@@ -122,7 +124,10 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
     }
 
   ul {
-    height:18.875em; width:34em;
+    /* original */
+    /* height:18.875em; width:34em; */
+
+    height:18.875em; width:38em;
     margin:5em auto; padding:3em 0 0 3em; position:relative; 
     border:1px solid #160801; border-radius:1em; 
     /* background:-webkit-gradient(linear, right bottom, left top, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0))), url('https://f.cl.ly/items/2q1f3t0C3R1b0g081w3n/vwood.png'); */
