@@ -2,20 +2,21 @@
 
 /* whole document */
 body {
-  /* font-family: 'Fredericka the Great';   */
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;  
   color: black;
   background-image: url("../images/background.jpeg");
+  margin-bottom: 3rem;
 }
 
 #subwrapper .container {
   align-content: center;
   background: white;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   border: 1px solid red;
   border-radius: 1rem;
   opacity: 0.75;
+  
 }
 
 /* jumbotron */
@@ -49,6 +50,7 @@ nav {
   text-align: right;
   border-radius: 0;
   border: 1px solid red;
+  margin-bottom: 0rem;
 }
 
 h1 {
