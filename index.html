@@ -14,12 +14,15 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- animate.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
 </head>
 
 <body>
     <div class="jumbotron-fluid">
         <div class="container">
-            <h1 class="animated rubberBand">VIKI (Virtual Internet Keyboard Instructor)</h1>
+            <h1 class="animated rollIn">VIKI (Virtual Internet Keyboard Instructor)</h1>
             <p>She's no SIRI, but hey, there's potential.</p>
             <!-- <h3>(or just mash keys... no judgement here)</h3> -->
         </div>
@@ -38,7 +41,7 @@
                 </a>
                 <a class="nav-item nav-link" href="assets/html/about.html">About</a>
                 <a class="nav-item nav-link" href="assets/html/resources.html">Resources</a>
-                <a class="nav-item nav-link" href="assets/html/connect.html">Connect</a>
+                <a class="nav-item nav-link" href="assets/html/leaderboard.html">Leaderboard</a>
             </div>
         </div>
     </nav>
@@ -49,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <form class="animated rubberBand">
+                    <form>
                         <h2>First, tell us about you!</h2>
                         <div class="form-group">
                             <label for="user-name-input">What is your name?</label>
@@ -60,7 +63,7 @@
                             <select class="form-control" id="level-input">
                                 <option>beginner</option>
                                 <option>intermediate</option>
-                                <option>advanced (why are you here??!)</option>
+                                <option>advanced (Why are you here???!!!)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -68,28 +71,15 @@
                             <input type="text" class="form-control" id="song-input">
                         </div>
                         <div class="form-group">
-                            <label for="musician-input">Who is your favorite musician?</label>
-                            <input type="text" class="form-control" id="musician-input">
+                            <label for="fav-input">Who is your favorite musician?</label>
+                            <input type="text" class="form-control" id="fav-input">
                         </div>
-                        <button type="submit" class="btn">Submit</button>
+                        <button type="submit" id="add-user-btn" class="btn">Submit</button>
                     </form>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <div id="last-user-display">
-                        <h2 class="animated rubberBand">Last performer:
-                            <span id="last-visitor"></span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-lg-2"></div>
-            </div>
-        </div>    
     </div>
 
 
@@ -117,11 +107,13 @@
                 </div>
                 <br>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div id="keys"><img src="assets/images/keyboard-layout.jpg" max height=250px max width=475px></div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="keys">
+                            <img src="assets/images/keyboard-layout.jpg" max height=250px max width=475px>
+                        </div>
+                    </div>
                 </div>
-            </div>
                 <div class="col-lg-6">
                     <div id="keyboard">
                         <ul class="set">
@@ -145,37 +137,40 @@
             </div>
         </div>
     </div>
-    
+
+
+    <br>
+    <br>
+    <br>
 
     <!-- TODO -->
     <!-- fix this stupid footer... it behaves weirdly on all the pages. -->
-        <div class="sticky-bottom">
-            <footer>
-                <div class="card">
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0">
-                            <p>“I’ve been imitated so well I’ve heard people copy my mistakes.”</p>
-                            <footer class="blockquote-footer">Jimi Hendrix</cite>
-                            </footer>
-                        </blockquote>
-                    </div>
+    <div class="sticky-bottom">
+        <footer>
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>“I’ve been imitated so well I’ve heard people copy my mistakes.”</p>
+                        <footer class="blockquote-footer">Jimi Hendrix</cite>
+                        </footer>
+                    </blockquote>
                 </div>
-            </footer>
-        </div>
-        
-    
+            </div>
+        </footer>
+    </div>
 
-        <!-- jQuery  -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- bootstrap -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-            crossorigin="anonymous"></script>
-        <!-- tone.js  -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
-        <!-- app javascript -->
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
-        <!--Firebase-->
-        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
+
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- tone.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
+    <!-- app javascript -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 </body>
 
