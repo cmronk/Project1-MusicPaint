@@ -241,7 +241,7 @@ $.ajax({
 }).then(function (data) {
   console.log(data);
 
-  $("#player").append(data.items[0].player.embedHtml)
+  $("#player").append(data.items[0].player.embedHtml.replace("http://", "https://"))
 });
 // only shows form initially until user specifies level
 $("#subwrapper").hide();
