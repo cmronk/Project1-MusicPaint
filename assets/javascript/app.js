@@ -79,8 +79,8 @@ $(document).ready(function () {
     var synth = new Tone.Synth().toMaster()
     var listItems = $(".dropdown-item");
 
-    // testing
-    $("#ss1").on("click", function (event) {
+
+    $("#ss1").click(function (event) {
       event.preventDefault();
       synth = new Tone.AMSynth().toMaster()
       listItems.removeClass("active");
@@ -219,8 +219,7 @@ $(document).ready(function () {
 
     //____Keydown events___________________________________________________
     var down = {};
-    // added on("key") to test mobile
-    $(document).on("keydown", function (event) {
+    $(document).keydown(function (event) {
       Tone.context.resume();
 
       var keycode = (event.keyCode ? event.keyCode : event.which);
