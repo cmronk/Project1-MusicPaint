@@ -15,6 +15,7 @@ $(document).ready(function () {
   // TZ Button for adding User
   $("#add-user-btn").on("click", function (event) {
       event.preventDefault();
+   
 
       // TZ Grabs user input
       var userName = $("#user-name-input").val().trim();
@@ -33,7 +34,7 @@ $(document).ready(function () {
 
       // TZ Uploads data to the database
       database.ref().push(newUser);
-
+      
       // TZ Clears all of the text-boxes
       $("#user-name-input").val("");
       $("#level-input").val("");
@@ -52,8 +53,8 @@ $(document).ready(function () {
       var userFav = childSnapshot.val().fav;
 
       // TZ Add each data into the table
-      $("#music-table > tbody").append("<tr><td>" + userName + "</td><td>" + userLevel + "</td><td>" +
-          userSong + "</td><td>" + userFav + "</td><td>");
+      $("#music-table > tbody").prepend("<tr><td>" + userName + "</td><td>" + userLevel + "</td><td>" +
+          userSong + "</td><td>" + userFav + "</td></tr>");
   });
 
 
