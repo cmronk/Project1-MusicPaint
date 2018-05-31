@@ -219,7 +219,8 @@ $(document).ready(function () {
 
     //____Keydown events___________________________________________________
     var down = {};
-    $(document).keydown(function (event) {
+    // added on("key") to test mobile
+    $(document).on("keydown", function (event) {
       Tone.context.resume();
 
       var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -292,7 +293,7 @@ $(document).ready(function () {
 
 
       }
-      $(this).keyup(function (event) {
+      $(this).on("keyup", function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         down[keycode] = null;
         if (keyToPress) {
