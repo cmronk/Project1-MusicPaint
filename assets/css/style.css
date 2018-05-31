@@ -78,6 +78,7 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
   border: 1px solid red;
   opacity: 0.75;
   overflow: none;
+
 }
 
 #user-display {
@@ -104,11 +105,39 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
 #resources {
   text-align: center;
 }
+/* youtube player */
+
+.player-container {
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 50%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  border: 1px solid red;
+  border-radius: 1rem;
+}
+
+.player-container #player, {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /* Piano Key section */
 
 #keys {
   opacity: 0.85;
   margin: 1rem;
+  /* border: 1px solid red;
+  border-radius: 1rem; */
+}
+
+.set {
+  border: 1px solid red;
+  border-radius: 1rem;
+
 }
 /* .set {
   font-size: 1.5rem;
