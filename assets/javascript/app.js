@@ -85,77 +85,66 @@ $(document).ready(function () {
       synth = new Tone.AMSynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     $("#ss2").click(function (event) {
       event.preventDefault();
       synth = new Tone.DuoSynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     $("#ss3").click(function (event) {
       event.preventDefault();
       synth = new Tone.FMSynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     $("#ss4").click(function (event) {
       event.preventDefault();
       synth = new Tone.MembraneSynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     // $("#ss5").click(function(){
     //   synth = new Tone.MetalSynth().toMaster()
     //   listItems.removeClass("active");
     //     $(this).toggleClass("active");
     //     console.log("5");
-    //     console.log(synth);
     // })
     $("#ss6").click(function (event) {
       event.preventDefault();
       synth = new Tone.MonoSynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     // $("#ss7").click(function(){
     //   synth = new Tone.MonophonicSynth().toMaster()
     //   listItems.removeClass("active");
     //     $(this).toggleClass("active");
     //     console.log("7");
-    //     console.log(synth);
     // })
     // $("#ss8").click(function(){
     //   synth = new Tone.NoiseSynth().toMaster()
     //   listItems.removeClass("active");
     //     $(this).toggleClass("active");
     //     console.log("8");
-    //     console.log(synth);
     // })
     $("#ss9").click(function (event) {
       event.preventDefault();
       synth = new Tone.PluckSynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     $("#ss10").click(function (event) {
       event.preventDefault();
       synth = new Tone.PolySynth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
     $("#ss11").click(function (event) {
       event.preventDefault();
       synth = new Tone.Synth().toMaster()
       listItems.removeClass("active");
       $(this).toggleClass("active");
-      console.log(synth);
     })
 
     //Piano Click________
@@ -323,7 +312,6 @@ $(document).ready(function () {
   $.ajax({
     url: "https://www.googleapis.com/youtube/v3/playlists?part=player&id=PLaq-_cPy3RZz-qNEAf7U1PMtJwJmxjrBT&key=AIzaSyAmH5A7wXlMygxeB0YdiFoHysWyoxtnMDo"
   }).then(function (data) {
-    // console.log(data);
 
     $("#player").append(data.items[0].player.embedHtml.replace("http://", "https://"))
   });
@@ -332,15 +320,8 @@ $(document).ready(function () {
   //   event.preventDefault();
 
   //   var search = $("#user-song-input").val().trim();
-  //   console.log(search);
-  // });
 
-  // $.ajax({
-  //   url: "https://www.googleapis.com/youtube/v3/search=" + search + "/part=player&key=AIzaSyAmH5A7wXlMygxeB0YdiFoHysWyoxtnMDo"
-  // }).then(function (data) {
-  //   console.log(data);
 
-  //   $("#player1").append(data.items[0].player.embedHtml.replace("http://", "https://"))
   // });
 
 })
