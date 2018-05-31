@@ -79,8 +79,8 @@ $(document).ready(function () {
     var synth = new Tone.Synth().toMaster()
     var listItems = $(".dropdown-item");
 
-
-    $("#ss1").click(function (event) {
+    // testing
+    $("#ss1").on("click", function (event) {
       event.preventDefault();
       synth = new Tone.AMSynth().toMaster()
       listItems.removeClass("active");
