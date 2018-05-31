@@ -19,6 +19,7 @@ $("#subwrapper").hide();
   //Button for adding User
   $("#add-user-btn").on("click", function (event) {
       event.preventDefault();
+   
 
       //Grabs user input
       var userName = $("#user-name-input").val().trim();
@@ -36,9 +37,10 @@ $("#subwrapper").hide();
       };
 
       //Uploads data to the database
-      database.ref().push(newUser);
+ //Clears all of the text-boxes
 
-      //Clears all of the text-boxes
+      // TZ Clears all of the text-boxes
+
       $("#user-name-input").val("");
       $("#level-input").val("");
       $("#song-input").val("");
@@ -55,9 +57,11 @@ $("#subwrapper").hide();
       var userSong = childSnapshot.val().song;
       var userFav = childSnapshot.val().fav;
 
-      //Add each data into the table
-      $("#music-table > tbody").append("<tr><td>" + userName + "</td><td>" + userLevel + "</td><td>" +
-          userSong + "</td><td>" + userFav + "</td><td>");
+
+      // TZ Add each data into the table
+      $("#music-table > tbody").prepend("<tr><td>" + userName + "</td><td>" + userLevel + "</td><td>" +
+          userSong + "</td><td>" + userFav + "</td></tr>");
+
   });
 
 
