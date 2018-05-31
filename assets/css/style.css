@@ -2,12 +2,16 @@
 
 /* whole document */
 body {
-  font-family: 'Open Sans Condensed', sans-serif;  
+  font-family: 'Vidaloka', serif;  
   color: black;
   background-image: url("../images/background.jpeg");
   margin-bottom: 3rem;
 }
 
+.alert {
+  margin: 1%;
+  text-align: center;
+}
 #subwrapper .container {
   align-content: center;
   background: white;
@@ -16,7 +20,6 @@ body {
   border: 1px solid red;
   border-radius: 1rem;
   opacity: 0.75;
-  
 }
 
 /* jumbotron */
@@ -27,18 +30,19 @@ body {
     margin-bottom: 0;
     text-align: center;
     padding: 1.5rem;
-    
 }
 
 /* navbar */
 navbar {
   margin: 0;
+  color: black;
+
 }
 
 nav {
-  opacity: 0.5;
-  border: 1px solid red;
+  border-bottom: 1px solid red;
   margin-bottom: 1rem;
+  opacity: 0.9;
 
 }
 
@@ -52,12 +56,20 @@ nav {
   border: 1px solid red;
 }
 
+.card p {
+  text-align: right;
+}
+
 h1 {
   font-size: 3rem;
   text-align: center;
 }
 
-h2 {
+h2, h4, p{
+  text-align: center;
+}
+
+.container h3 {
   text-align: center;
 }
 
@@ -65,7 +77,6 @@ button {
   padding: 20px;
   background: black;
   color: white;
-  border: 1px solid red;
 }
 
 /* form */
@@ -78,7 +89,6 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
   border: 1px solid red;
   opacity: 0.75;
   overflow: none;
-
 }
 
 #user-display {
@@ -105,12 +115,12 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
 #resources {
   text-align: center;
 }
-/* youtube player */
 
+/* youtube player */
 .player-container {
-  font-size: 1rem;
   position: relative;
   padding-bottom: 50%;
+  margin-top: 3%;
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -125,24 +135,75 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
   width: 100%;
   height: 100%;
 }
-/* Piano Key section */
 
-#keys {
+
+/* Piano Key section */
+.dropdown {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.dropdown-toggle {
+  border: 1px solid red;
+  border-radius: 1rem;
+  opacity: 1;
+  padding: 10%;
+  float: left;
+  margin-top: 15%;
+}
+
+img {
   opacity: 0.85;
-  margin: 1rem;
-  /* border: 1px solid red;
-  border-radius: 1rem; */
+  margin-left: 50px;
+  padding: 5%;
+  background: black; 
+  border: 1px solid red;
+  border-radius: 1rem;
+}
+#keyboard {
+  width: 100%;
+  height: auto;
+  margin-left:5%;
+}
+
+#keys h1, #keys p {
+  align-content: center;
+  background: black;
+  color: white;
+  opacity: 0.8;
+  border: 1px solid red;
+  padding: 5%;
 }
 
 .set {
   border: 1px solid red;
   border-radius: 1rem;
+  padding: 7%;
+  margin-right: 0;
 
 }
-/* .set {
-  font-size: 1.5rem;
-} */
-/* * { box-sizing:border-box; } */
+
+.set-playground{
+  font-size: 1.75rem;
+  margin-left: -0.75rem;
+  background: linear-gradient(white, gray, black);
+  opacity: 0.8;
+  border: 1px solid red;
+  border-radius: 1rem;
+  padding: 5%;
+}
+
+.big-container {
+  background: white;
+  opacity: 0.75;
+  border: 1px solid red;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+* { box-sizing:border-box; }
 
   body ul{ 
       margin:0; 
@@ -153,7 +214,7 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
     /* original */
     /* height:18.875em; width:34em; */
 
-    height:18.875em; width:38em;
+    height:18.875em; width:37em;
     margin:5em auto; padding:3em 0 0 3em; position:relative; 
     border:1px solid #160801; border-radius:1em; 
     /* background:-webkit-gradient(linear, right bottom, left top, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0))), url('https://f.cl.ly/items/2q1f3t0C3R1b0g081w3n/vwood.png'); */
@@ -176,8 +237,22 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
     box-shadow:-1px 0 0 rgba(255,255,255,0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0,0,0,0.2);
     background: linear-gradient(top, #eee 0%,#fff 100%);
   }
-
+  ul .white.unpressed{
+    height:16em; width:4em; z-index:1;
+    border-left:1px solid #bbb;
+    border-bottom:1px solid #bbb;
+    border-radius:0 0 5px 5px;
+    box-shadow:-1px 0 0 rgba(255,255,255,0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0,0,0,0.2);
+    background: linear-gradient(top, #eee 0%,#fff 100%);
+  }
   ul .white:active {
+    border-top:1px solid #777;
+    border-left:1px solid #999;
+    border-bottom:1px solid #999;
+    box-shadow:2px 0 3px rgba(0,0,0,0.1) inset, -5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
+    background: linear-gradient(top, #fff 0%,#e9e9e9 100%);
+  }
+  ul .white.pressed {
     border-top:1px solid #777;
     border-left:1px solid #999;
     border-bottom:1px solid #999;
@@ -192,8 +267,18 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
     box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -5px 2px 3px rgba(0,0,0,0.6) inset, 0 2px 4px rgba(0,0,0,0.5);
     background:linear-gradient(45deg, #222 0%,#555 100%);
   }
-
+  .black.bunpressed {
+    height:8em; width:2em; margin:0 0 0 -1em; z-index:2;
+    border:1px solid #000;
+    border-radius:0 0 3px 3px;
+    box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -5px 2px 3px rgba(0,0,0,0.6) inset, 0 2px 4px rgba(0,0,0,0.5);
+    background:linear-gradient(45deg, #222 0%,#555 100%);
+  }
   .black:active {
+    box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -2px 2px 3px rgba(0,0,0,0.6) inset, 0 1px 2px rgba(0,0,0,0.5);
+    background:linear-gradient(left, #444 0%,#222 100%);
+  }
+  .black.bpressed {
     box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -2px 2px 3px rgba(0,0,0,0.6) inset, 0 1px 2px rgba(0,0,0,0.5);
     background:linear-gradient(left, #444 0%,#222 100%);
   }

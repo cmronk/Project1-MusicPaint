@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn to play with YouTube</title>
     <!-- font link -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">    -->
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
     <!-- bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
@@ -15,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <!-- animate.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -23,7 +25,6 @@
         <div class="container">
             <h1 class="animated rollIn">VIKI (Virtual Internet Keyboard Instructor)</h1>
             <p>She's no SIRI, but hey, there's potential.</p>
-            <!-- <h3>(or just mash keys... no judgement here)</h3> -->
         </div>
     </div>
 
@@ -45,20 +46,71 @@
         </div>
     </nav>
 
-    <div class="container">
+
+    <div class="container big-container">
         <div class="row">
             <div class="col-lg-12">
-                <div id="instructions">
-                    <h2>Playground</h2>
+                <br>
+                <h2>Playground</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12"><h3>Chose a sound for your keys and begin!</h3></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="container">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Keyboard Sounds
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item active" href="#" id="ss11">Synth</a>
+                            <a class="dropdown-item" href="#" id="ss1">AM Synth</a>
+                            <a class="dropdown-item" href="#" id="ss2"> Duo Synth</a>
+                            <a class="dropdown-item" href="#" id="ss3">FM Synth</a>
+                            <a class="dropdown-item" href="#" id="ss4">Membrane Synth</a>
+                            <!-- <a class="dropdown-item" href="#" id="ss5">Metal Synth</a> -->
+                            <a class="dropdown-item" href="#" id="ss6">Mono Synth</a>
+                            <!-- <a class="dropdown-item" href="#" id="ss7">Monophonic Synth</a> -->
+                            <!-- <a class="dropdown-item" href="#" id="ss8">Noise Synth</a> -->
+                            <a class="dropdown-item" href="#" id="ss9">Pluck Synth</a>
+                            <a class="dropdown-item" href="#" id="ss10">Poly Synth</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="keyboard">
+                    <ul class="set-playground">
+                        <li class="white e" id="c"></li>
+                        <li class="black ds" id="cSharp"></li>
+                        <li class="white d" id="d"></li>
+                        <li class="black cs" id="dSharp"></li>
+                        <li class="white c" id="e"></li>
+                        <li class="white b" id="f"></li>
+                        <li class="black as" id="fSharp"></li>
+                        <li class="white a" id="g"></li>
+                        <li class="black gs" id="gSharp"></li>
+                        <li class="white g" id="a"></li>
+                        <li class="black fs" id="aSharp"></li>
+                        <li class="white f" id="b"></li>
+                        <li class="white e" id="c1"></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
+        <br>
+        <br>
+        <!-- <div class="row">
+            <div class="col-lg-12">
                 <form>
                     <h2>Find your own song!</h2>
                     <div class="form-group">
@@ -67,79 +119,14 @@
                     </div>
                     <button type="submit1" id="add-songs-btn" class="btn">Submit</button>
                 </form>
-            </div>    
-            <div class="col-lg-2"></div>
-
-        </div>
-
-        <div class="row">
+            </div>
             <div class="col-lg-6">
                 <div id="player1"></div>
             </div>
-        </div>
+        </div> -->
     </div>
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="keys">
-                    <img src="../images/keyboard-layout.jpg" max height=250px max width=475px>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="col-lg-12">
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Keyboard Sounds
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item active" href="#" id="ss11">Synth</a>
-                    <a class="dropdown-item" href="#" id="ss1">AM Synth</a>
-                    <a class="dropdown-item" href="#" id="ss2"> Duo Synth</a>
-                    <a class="dropdown-item" href="#" id="ss3">FM Synth</a>
-                    <a class="dropdown-item" href="#" id="ss4">Membrane Synth</a>
-                    <!-- <a class="dropdown-item" href="#" id="ss5">Metal Synth</a> -->
-                    <a class="dropdown-item" href="#" id="ss6">Mono Synth</a>
-                    <!-- <a class="dropdown-item" href="#" id="ss7">Monophonic Synth</a> -->
-                    <!-- <a class="dropdown-item" href="#" id="ss8">Noise Synth</a> -->
-                    <a class="dropdown-item" href="#" id="ss9">Pluck Synth</a>
-                    <a class="dropdown-item" href="#" id="ss10">Poly Synth</a>
-
-
-                </div>
-            </div>
-
-            <div id="keyboard">
-                <ul class="set">
-                    <li class="white e" id="c"></li>
-                    <li class="black ds" id="cSharp"></li>
-                    <li class="white d" id="d"></li>
-                    <li class="black cs" id="dSharp"></li>
-                    <li class="white c" id="e"></li>
-                    <li class="white b" id="f"></li>
-                    <li class="black as" id="fSharp"></li>
-                    <li class="white a" id="g"></li>
-                    <li class="black gs" id="gSharp"></li>
-                    <li class="white g" id="a"></li>
-                    <li class="black fs" id="aSharp"></li>
-                    <li class="white f" id="b"></li>
-                    <li class="white e" id="c1"></li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="fixed-bottom">
+    <div class="sticky-bottom">
         <footer>
             <div class="card">
                 <div class="card-body">
@@ -160,6 +147,8 @@
     <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <!-- tone.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.1.9/Tone.js"></script>
     <!-- app javascript -->
     <script type="text/javascript" src="../javascript/app.js"></script>
     <!--Firebase-->
