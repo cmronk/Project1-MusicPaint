@@ -73,6 +73,11 @@ h2, h4, p{
   text-align: center;
 }
 
+h5 {
+  text-align: center;
+  font-size: 16px;
+}
+
 button {
   padding: 20px;
   background: black;
@@ -153,7 +158,7 @@ form, #last-user-display, #user-display, #instructions, #key-reminders, #about, 
   margin: 15%;
 }
 
-img {
+.img-keys {
   opacity: 0.85;
   margin-left: 50px;
   padding: 1%;
