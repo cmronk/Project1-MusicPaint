@@ -1,4 +1,3 @@
-# Project1-MusicPaint
-Christine
-David
-Tenille 
+VIKI (Virtual Internet Keyboard Instructor)
+
+David Juarez, Tenille Zaher, Christine Ronk
